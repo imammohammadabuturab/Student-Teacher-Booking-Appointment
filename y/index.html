@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student-Teacher Booking Appointment</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Student-Teacher Booking Appointment</div>
+        <div id="nav-links">
+            <button id="logout-btn" style="display:none;">Logout</button>
+        </div>
+    </nav>
+
+    <div id="auth-section" class="container">
+        <h2>Login / Register</h2>
+        <select id="role-select">
+            <option value="student">Student</option>
+            <option value="teacher">Teacher</option>
+            <option value="admin">Admin</option>
+        </select>
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="handleLogin()">Login</button>
+        <button onclick="handleRegister()" class="secondary-btn">Register (Student Only)</button>
+    </div>
+
+    <div id="admin-dashboard" class="container hidden">
+        <h2>Admin Dashboard</h2>
+        <div class="card">
+            <h3>Add New Teacher</h3>
+            <input type="text" id="new-teacher-name" placeholder="Teacher Name">
+            <input type="text" id="new-teacher-dept" placeholder="Department">
+            <input type="text" id="new-teacher-subject" placeholder="Subject">
+            <input type="email" id="new-teacher-email" placeholder="Teacher Email">
+            <input type="password" id="new-teacher-pass" placeholder="Temporary Password">
+            <button onclick="adminAddTeacher()">Create Teacher Account</button>
+        </div>
+        <div class="card">
+            <h3>Pending Student Registrations</h3>
+            <ul id="admin-student-list"></ul>
+        </div>
+    </div>
+
+    <div id="teacher-dashboard" class="container hidden">
+        <h2>Teacher Dashboard</h2>
+        <div class="card">
+            <h3>Incoming Appointments</h3>
+            <ul id="teacher-appt-list"></ul>
+        </div>
+    </div>
+
+    <div id="student-dashboard" class="container hidden">
+        <h2>Student Dashboard</h2>
+        <div class="card">
+            <h3>Book Appointment</h3>
+            <select id="teacher-dropdown">
+                <option value="">Select a Teacher</option>
+            </select>
+            <input type="date" id="book-date">
+            <input type="time" id="book-time">
+            <textarea id="book-msg" placeholder="Purpose of appointment..."></textarea>
+            <button onclick="studentBookAppointment()">Send Request</button>
+        </div>
+        <div class="card">
+            <h3>My Status</h3>
+            <ul id="student-status-list"></ul>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
