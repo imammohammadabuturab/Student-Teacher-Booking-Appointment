@@ -59,11 +59,12 @@ The system solves traditional queuing issues by allowing students to check avail
 
 ## 📝 Future Improvements
 * Integration with video conferencing for virtual appointments.
-* Email notifications for booking confirmations.<img width="1920" height="1080" alt="Screenshot (38)" src="https://github.com/user-attachments/assets/4c6ab1a4-3876-4aa1-883a-eae8d6d6060d" />
+* Email notifications for booking confirmations.
 
 
 
 ## Screenshorts
 
 ![Uploading Screenshot (38).png…]()
+<img width="1920" height="1080" alt="Screenshot (38)" src="https://github.com/user-attachments/assets/4c6ab1a4-3876-4aa1-883a-eae8d6d6060d" />
 <img width="1920" height="1080" alt="Screenshot (51)" src="https://github.com/user-attachments/assets/1542fa1b-aa1f-4674-90fa-620e899df578" />
